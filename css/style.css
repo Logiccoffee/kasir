@@ -28,16 +28,54 @@
 
   .dashboard-section {
     display: grid;
+    grid-template-areas:
+        "unpaid-orders paid-orders"
+        "today-sales today-sales"
+        "best-seller best-seller";
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    margin: 20px 0;
 }
 
 .dashboard-card {
+  display: flex;
+  align-items: center;
   background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 20px;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-left: 8px solid #4b2e1c; /* Aksen coklat */
+  transition: transform 0.2s, background-color 0.2s, border-left-color 0.2s;
+}
+
+/* Efek hover hanya untuk card "Belum Bayar" dan "Sudah Bayar" */
+.unpaid-orders:hover, 
+.paid-orders:hover {
+  transform: scale(1.02); /* Sedikit membesarkan (sangat ringan) */
+  background-color: #f8f8f8; /* Ubah warna latar belakang */
+}
+
+.card-icon {
+  flex-shrink: 0;
+  font-size: 5rem;
+  color: #A57B32;
+  margin-right: 20px;
+  transition: color 0.3s; /* Animasi warna ikon */
+}
+
+.card-content h2 {
+  margin: 0;
+  font-family: "signika" Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #805700;
+}
+
+.card-content p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #09431F;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .dashboard-card h2 {
@@ -51,18 +89,22 @@
 }
 
 .best-seller {
+  grid-area: best-seller;
   border-left-color: #09431F; /* Aksen coklat muda */
 }
 
 .today-sales {
+  grid-area: today-sales;
   border-left-color: #09431F; /* Aksen hijau */
 }
 
 .paid-orders {
+  grid-area: paid-orders;
   border-left-color: #09431F; /* Aksen hijau tua */
 }
 
 .unpaid-orders {
+  grid-area: unpaid-orders;
   border-left-color: #09431F; /* Aksen merah */
 }
   
@@ -324,7 +366,7 @@
   .content-wrap {
     background-color: #ffff;
     grid-area: content;
-    padding: 3em;
+    padding: 20px;
     overflow: auto;
   }
   
@@ -332,6 +374,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
   }
   
   .content-wrap .content-head h1 {
