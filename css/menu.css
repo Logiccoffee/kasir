@@ -1014,6 +1014,9 @@ input {
     font-weight: bold;
     /* Untuk memastikan font tetap bold */
 }
+
+
+/* css tabel */
 .dashboard-tittle {
     font-weight: 600;
 }
@@ -1022,8 +1025,10 @@ input {
     padding: 5px;
 }
 .table td, .table th {
-    text-align: center; /* Menempatkan teks di tengah */
-    vertical-align: middle; /* Menempatkan konten di tengah secara vertikal */
+     .table th, .table td {
+        text-align: left; /* Perataan teks di kiri */
+        vertical-align: middle; /* Agar isi sejajar secara vertikal */
+    }
 }
 .table-status .dropdown {
     display: flex;
