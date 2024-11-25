@@ -25,6 +25,46 @@
     grid-template-rows: 80px auto;
     grid-template-areas: 'menu search' 'menu content';
   }
+
+  .dashboard-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 8px solid #4b2e1c; /* Aksen coklat */
+}
+
+.dashboard-card h2 {
+  margin-top: 0;
+  color: #4b2e1c;
+}
+
+.dashboard-card p {
+  font-size: 1.2rem;
+  color: #2e7d32; /* Warna hijau */
+}
+
+.best-seller {
+  border-left-color: #09431F; /* Aksen coklat muda */
+}
+
+.today-sales {
+  border-left-color: #09431F; /* Aksen hijau */
+}
+
+.paid-orders {
+  border-left-color: #09431F; /* Aksen hijau tua */
+}
+
+.unpaid-orders {
+  border-left-color: #09431F; /* Aksen merah */
+}
   
   .dashboard-tittle {
     font-family: 'signika';
@@ -1002,10 +1042,11 @@
     gap: 10px; /* Jarak antara ikon dan teks */
   }
   
-  .laporan-header .btn-cetak {
+  .laporan-header .dropdown-toggle {
     display: flex;
     align-items: center;
-    gap: 8px; /* Jarak antara ikon dan teks */
+    gap: 8px;
+    /* Jarak antara ikon dan teks */
     background-color: #09431f;
     color: white;
     border: none;
@@ -1015,8 +1056,8 @@
     cursor: pointer;
   }
   
-  .laporan-header .btn-cetak:hover {
-    background-color: #c9994c;
+  .laporan-header .dropdown-toggle:hover {
+    background-color: #c9994c;
   }
   
   
@@ -1052,13 +1093,6 @@
   .table-best-seller thead {
     background-color: #4CAF50 !important; /* Warna latar belakang yang diinginkan */
     color: white;               /* Warna teks di header tabel */
-  }
-  
-  .best-seller-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
   }
   
   .product-card {
