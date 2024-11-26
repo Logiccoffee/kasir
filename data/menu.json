@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "gambar": "img/matcha.png",
+        "nama": "Matcha Latte",
+        "harga": "Rp 15.000"
+    },
+    {
+        "id": "2",
+        "gambar": "img/kopsu.png",
+        "nama": "Kopi Susu",
+        "harga": "Rp16.000"
+    },
+    {
+        "id": "3",
+        "gambar": "img/vanilla_bliss.png",
+        "nama": "Vanila Bliss",
+        "harga": "Rp 15.000"
+    },
+    {
+        "id": "4",
+        "gambar": "img/sm.png",
+        "nama": "Matcha Strawberry",
+        "harga": "Rp 18000"
+    }
+]
